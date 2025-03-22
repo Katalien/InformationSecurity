@@ -91,8 +91,8 @@ def decrypt(encrypted_text):
 
 
 def main():
-    encrypted_filepath = '../Data/K1_encrypted.txt'
-    decrypted_filepath = '../Data/K1_decrypted.txt'
+    encrypted_filepath = '../Data/K1_data/K1_encrypted.txt'
+    decrypted_filepath = '../Data/K1_data/K1_decrypted.txt'
     encrypted_text = read_data(encrypted_filepath)
     decrypted_text = decrypt(encrypted_text)
     write_data(decrypted_filepath, decrypted_text)
