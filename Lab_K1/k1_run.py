@@ -32,7 +32,6 @@ def count_matching_index(groupped_text):
 
 
 def find_key_legth(encrypted_text, max_key_length=30):
-
     best_ind = 0
     best_length = 1
     for length in range(1, max_key_length + 1):
@@ -61,7 +60,7 @@ def find_best_letter_shift(group):
     return ALPHABET[best_shift]
 
 
-def dectypt(encrypted_text):
+def decrypt(encrypted_text):
     clean_encrypted_text = ''.join(char.lower() for char in encrypted_text if char.lower() in ALPHABET)
 
     key_length = find_key_legth(clean_encrypted_text)
@@ -95,7 +94,7 @@ def main():
     encrypted_filepath = '../Data/K1_encrypted.txt'
     decrypted_filepath = '../Data/K1_decrypted.txt'
     encrypted_text = read_data(encrypted_filepath)
-    decrypted_text = dectypt(encrypted_text)
+    decrypted_text = decrypt(encrypted_text)
     write_data(decrypted_filepath, decrypted_text)
     print(f"Текст записан в директорию {decrypted_filepath}")
 
